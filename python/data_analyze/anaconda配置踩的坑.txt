@@ -1,0 +1,35 @@
+在win10下， 下载了最新的anaconda安装包，4.5.12
+
+添加虚拟环境如下方式：
+    conda create --name python34 python=3.4
+
+提示：
+    CondaHTTPError: HTTP 000 CONNECTION FAILED for url
+    这个应该是被墙了，
+    然后按照网上的帖子添加清华源， 中科大源都不行。
+    然后去， 清华/中科大源通过web 登陆发现是可以的，查看了下历史的anaconda 的版本呢， 最新的是4.4.0的，估计是找不到新的版本。
+
+
+配置anaconda:
+
+1 添加清华源
+    命令行中直接使用以下命令
+
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+
+    # 设置搜索时显示通道地址
+    conda config --set show_channel_urls yes
+
+2 添加中科大源
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
+    conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
+    conda config --set show_channel_urls yes
+
+config --help 通过该命令可以看出你的.condarc 配置文件所在路径，首次安装是找不到这个文件的， 只有执行了config config --args
+才会生成这个文件， （为了这个问题纠结了好久！还是走的路太少了）

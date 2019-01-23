@@ -1,0 +1,117 @@
+数据分析学习：
+    puthon环境未py3.7
+
+    package:
+    pandas:
+
+
+Anaconda 使用：
+    来源：https://blog.csdn.net/ITLearnHall/article/details/81708148
+
+        添加环境变量：
+            D:\Anaconda3\Scripts 到path
+
+        # 创建一个名为python34的环境，指定Python版本是3.4（不用管是3.4.x，conda会为我们自动寻找3.4.x中的最新版本）
+        conda create --name python34 python=3.4
+        # 安装好后，使用activate激活某个环境
+        activate python34 # for Windows
+        source activate python34 # for Linux & Mac
+        # 激活后，会发现terminal输入的地方多了python34的字样，实际上，此时系统做的事情就是把默认2.7环境从PATH中去除，再把3.4对应的命令加入PATH
+        # 此时，再次输入
+        python --version
+        # 可以得到`Python 3.4.5 :: Anaconda 4.1.1 (64-bit)`，即系统已经切换到了3.4的环境
+        # 如果想返回默认的python 2.7环境，运行
+        deactivate python34 # for Windows
+        source deactivate python34 # for Linux & Mac
+        # 删除一个已有的环境
+        conda remove --name python34 --all
+
+        安装第三方包
+        输入
+        conda install requests
+
+        或者
+
+        pip install requests
+
+        来安装requests包.
+
+        安装完成之后我们再输入python进入解释器并import requests包, 这次一定就是成功的了.
+
+        卸载第三方包
+        那么怎么卸载一个包呢
+
+        conda remove requests
+
+        或者
+
+        pip uninstall requests
+
+        就行啦.
+
+        查看环境包信息
+        要查看当前环境中所有安装了的包可以用
+
+        conda list
+
+        导入导出环境
+        如果想要导出当前环境的包信息可以用
+
+        conda env export > environment.yaml
+
+        将包信息存入yaml文件中.
+
+        当需要重新创建一个相同的虚拟环境时可以用
+
+        conda env create -f environment.yaml
+
+        其实命令很简单对不对, 我把一些常用的在下面给出来, 相信自己多打两次就能记住
+
+        activate // 切换到base环境
+
+        activate learn // 切换到learn环境
+
+        conda create -n learn python=3 // 创建一个名为learn的环境并指定python版本为3(的最新版本)
+
+        conda env list // 列出conda管理的所有环境
+
+        conda list // 列出当前环境的所有包
+
+        conda install requests 安装requests包
+
+        conda remove requests 卸载requets包
+
+        conda remove -n learn --all // 删除learn环境及下属所有包
+
+        conda update requests 更新requests包
+
+        conda env export > environment.yaml // 导出当前环境的包信息
+
+        conda env create -f environment.yaml // 用配置文件创建新的虚拟环境
+
+anaconda做多python环境的包管理器：
+    conda create --name python34 python=3.4 (使用类似这条命令可以创建python的虚拟环境), 其实就和pipenv 类似, 不过conda的环境默认装了，许多科学计算的包
+    创建完成后发现：再Anaconda安装路径下的envs下多了你刚刚创建的 虚拟环境
+
+    切换到你所需要的分支
+        Linux, OS X: source activate bunnies
+        Windows: activate bunnies
+
+    查看你算在环境分支：
+        conda info --e
+
+    如果忘记了名称我们可以先用
+        conda env list
+
+Anaconda 初体验:
+打开Anaconda Prompt，这个窗口和doc窗口一样的，输入命令就可以控制和配置python，
+最常用的是conda命令，这个pip的用法一样，此软件都集成了，你可以直接用，点开的话如下图。
+用命令“conda list”查看已安装的包，从这些库中我们可以发现NumPy,SciPy,Matplotlib,Pandas，说明已经安装成功了!
+
+安装完anaconda，就相当于安装了Python、IPython、集成开发环境Spyder、一些包等等。
+你可以在Windows下的cmd下查看
+
+结合开发工具的使用：
+    用andconda创建虚拟环境， 使用pycharm 时选择你创建的虚拟环境
+
+
