@@ -32,7 +32,7 @@ class Mysql:
             host = self.host,
             user = self.user,
             passwd = self.passwd,
-            db = 'irain_park',
+            db = 'test_db',
             port = self.port,
             charset = self.charset
         )
