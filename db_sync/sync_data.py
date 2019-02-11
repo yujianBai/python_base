@@ -13,19 +13,19 @@ from base_db import Mysql
 from log import log
 
 def get_auth_share_data(host, port=3306):
-    handle = Mysql(host = host, user='root', passwd='iraindb10241GB', port = port)
+    handle = Mysql(host = host, user='root', passwd='passwd', port = port)
     sql = 'select * from new_auth_share;'
     data = handle.execute(sql)
     return data
 
 def get_auth_group_data(host, port = 3306):
-    handle = Mysql(host = host, user='root', passwd='iraindb10241GB', port = port)
+    handle = Mysql(host = host, user='root', passwd='passwd', port = port)
     sql = 'select * from new_auth_group;'
     data = handle.execute(sql)
     return data
 
 def count_auth_share(host, port =3306, table = 'new_auth_share'):
-    handle = Mysql(host = host, user='root', passwd='iraindb10241GB', port = port)
+    handle = Mysql(host = host, user='root', passwd='passwd', port = port)
     sql = 'select count(*) as cnt from %s;'%table
     data = handle.execute(sql)
     if data:
@@ -39,7 +39,7 @@ def get_yestorday(days =1):
     return str(yesterday)[:10]
 
 def get_records_data(host, port = 3306):
-    handle = Mysql(host = host, user='root', passwd='iraindb10241GB', port = port)
+    handle = Mysql(host = host, user='root', passwd='passwd', port = port)
     yesterday = get_yestorday()
     sql = "select * from records_inout where out_time between '%s' and '%s'  and out_time != '0000-00-00 00:00:00' and in_time != '0000-00-00 00:00:00';"%(yesterday+ ' 00:00:00', yesterday + ' 23:59:59')
     data = handle.execute(sql)
@@ -47,12 +47,12 @@ def get_records_data(host, port = 3306):
 
 
 def sync_data():
-    tablenames = [('sourth', '222.25.172.4'),
-                  ('north', '222.25.172.6'),
-                  ('employees', '222.25.172.5')]
-    localhost = '222.25.172.4'
+    tablenames = [('sourth', ip1),
+                  ('north', ip2),
+                  ('employees', ip3]
+    localhost = localhost
     localport = 13306
-    db_handle = Mysql(host = localhost, port = localport, user='xidian', passwd='029irain#deb')
+    db_handle = Mysql(host = localhost, port = localport, user='xidian', passwd='passwd')
 
     for tablename, remotehost in tablenames:
         localtable = 'new_auth_share_'+tablename
