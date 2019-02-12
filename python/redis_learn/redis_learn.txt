@@ -8,10 +8,63 @@ redis 优缺点：
 
 redis常用数据类型：
     string:字符串/整数型字符串
+        存储的值：
+            可以是字符串/整数/或浮点数，统称为元素
+        读写能力：
+            对字符串的操作/对整数类型的加减
+        operate command:
+            set string1 yejiangfeng
+            get string1
+            decrby string1 2 (string1减2， 如果string2是一个不可做减法操作的值，
+                将返回"ERR value is not integer or out of range")
+
     hash:类似python的数组
-    list:python的元组
-    set:集合，集合的元素唯一
-    zset:有序集合，元素有分值
+        存储的值：
+            有key-value 的散列组，其中key是字符串，value是元素
+        读写能力：
+            按照key 进行增加或者删除
+        operate command:
+            hset hash1 key1 12      //设置hash1的key1为12
+            hget hash1 key1         //获取hash1的key1
+            hlen hash1              //获取hash1的长度
+            hmget hash1 key1 key2   // 一次获取key1， 和key1的值
+
+    list:python的元组, 有序的列表(可以重复)
+        存储的值：
+            一个序列集合且每个节点都包含了一个元素
+        读写能力：
+            序列两端推入/弹出元素/修剪/查找或者移除元素
+        operate command:
+            lpush list 12 // 从左边推入元素12
+            lpush list 13
+            lpop list // 从左边取出元素
+            lpop list
+            llen list //求list 长度
+
+    set:集合，集合的元素唯一 //无序的方式存储多个不同的元素
+        存储的值：
+            各不相同的元素
+        读写能力：
+            从集合插入或者删除元素
+        operate command:
+            sadd set1 12      // 给set1 中添加元素
+            scard set1        // 求set1种元素个数
+            sismember set1 13 //问13 是不是set1种的元素
+            srem set1 13      //从set1种删除13 这个元素
+
+    sort Set: (zset:有序集合，元素有分值)
+        存储的值：
+            带分数的score-value有序集合，其中score为浮点，value为元素
+        读写能力：
+            集合插入，按照分数范围查找
+        operate command:
+            zadd zset1 10.1 val1
+            zcard zset1
+            zrange zset1 0 2 withscores (查看zet1中按照分数排名的0到2排名是哪些元素)
+            zrank zset1 val2 (查看zent1中， val2的排名)
+
+
+
 
 redis 的数据类型如此丰富，如果仅仅当作缓存来使用，确实是有点大材小用，
 meecache更合适
@@ -39,3 +92,22 @@ redis 数量控制器：
         商品抢购：
         抽奖限量：
         抢红包：
+
+redis的应用场景：
+    缓存
+    队列（redis的push,pop是原子操作）
+    数据存储（redis 有硬盘的持久化存储）
+
+redis 的安装环境：
+    1， 服务器环境
+    2， redis 版本，可以官网下载
+    3， 预安装软降（gcc, tcl)redis是c语言实现依赖gcc,tcl是一门语言，redis一些组建是tcl实现的
+
+redis的安装：
+    都是源码安装make, （make后生辰redis-server, redis-cli可执行文件)
+    make install
+
+    修改redis 的配置文件:
+        daemonize yes(后台启动)
+        port : redis 的端口
+

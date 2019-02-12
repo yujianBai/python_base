@@ -1,0 +1,6 @@
+redis 数据持久化：
+    1， RDB方式
+
+    2， AOF方式
+        这个模式是，没执行一条更改redis中的数据，redis就会将该命令写入硬盘的AOF文件
+        配置redis配置文件(默认为no): appendonly yes
