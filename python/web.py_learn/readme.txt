@@ -23,3 +23,21 @@ web.py 开发
         web.input()
     请求头获取：
         web.ctx.env
+
+响应处理： webpy_template.py
+    模板文件读取：
+        render.index("参数")
+    结果数据获取：
+        model.select("sql")
+    URL跳转：
+        web.seeother("/")
+
+ 安装web.py的时候遇到了一点小问题，
+    pip install web.py的时候，提示utils model not fount
+    网上找了资料大致意思是：web.py只有py2有，到了py3这个被bottle.py替代了。
+    如果系统是多个py环境主要使用pip2 install web.py 命令。
+
+
+
+
+
