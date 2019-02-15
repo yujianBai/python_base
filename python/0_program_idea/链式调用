@@ -1,0 +1,16 @@
+19-02-15
+
+
+链式调用：
+    几个要素：
+        主题
+        子函数
+        触发
+
+    第一次听说这个概念sqlalchemy中
+    Gift.query.filter_by().group_by().limit().all()
+    这里的Gigt.query.filter_by()就是一个主题，它返回一个query
+    group_by(), limit() 就是子函数
+    all() 是一个触发函数。
+
+    当有触发函数式， 这个会生成一个sql,然后执行提交
