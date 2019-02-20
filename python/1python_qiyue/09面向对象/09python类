@@ -1,0 +1,36 @@
+python类：
+    面向对象的3大特性：
+        继承
+        封装
+        多态
+    变量：
+        类变量
+            访问类变量：self.__class__.para
+        实例变量
+
+    方法：
+        实例方法：
+            def calss_funa(self):
+
+        类方法:
+            类和对象都可以调用, 可以使用类变量，不能访问实例变量
+
+            @classmethod
+            def class_fun(cls):
+
+        静态方法：
+            类和对象都可以调用, 可以使用类变量，不能访问实例变量
+            不要经常使用，它和面向对象关系不大
+
+            @staticmathod
+            def class_method(x, y):
+
+    构造函数：
+        def __init__(self):
+
+    成员可见性：即变量和方法的可见性
+
+        以双下划线开头
+        self.__name = ''
+
+
