@@ -1,0 +1,19 @@
+python高阶语法和用法
+
+    类型：
+        字典， 枚举
+
+    枚举其实是一个类：
+
+
+    枚举的优势:
+        不可变
+        不可使用相同标签 表示不同类型
+
+    枚举类型转换：
+
+    from enum import Enum
+    from enum import IntEnum // 枚举数据的value只能是int
+    from enum import unique  // unique 装饰器枚举数据的value 不可重复
+
+
