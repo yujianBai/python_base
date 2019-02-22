@@ -1,0 +1,9 @@
+None 空
+    不是空字符串，不是空的列表，不是0， 不是false
+
+    它是Nonetype的类型
+
+对象存在不一定是True
+    None 是一个对象，但他的bool 值是False
+
+bool 判断一个对象是真是假评判的依据：
