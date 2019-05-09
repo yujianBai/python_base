@@ -1,0 +1,29 @@
+常用resful 协议：
+
+GET: 查看资源
+
+POST: 增加资源
+
+PUT: 修改资源
+
+DELETE: 删除资源
+
+HEAD: 查看响应头
+
+OPTIONS: 查看可用请求方法
+
+带参数的请求：
+1, URL Parameters:
+    https://list.tmail.com/afasf?cat=asfas?&asdfasd&aa=asd
+    requests.get(url, params = {"key1":"values1"})
+    最常见的是淘宝的链接。页面跳转方便
+
+2, 表单参数提交
+    Content-Type: application/x-www-form-urlencoded
+    内容： key1=value&key2=value2
+    requests.post(url, data = {"key1":"value1"})
+
+3,json参数提交：
+    Content-Type:application/json
+    内容：{"key1":"value1", "key2":"value2"}
+    requests.post(url, json = {"key1":"value1"}

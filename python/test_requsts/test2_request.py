@@ -10,9 +10,7 @@ import requests
 
 
 def get_data_from_webserver():
-    r = requests.get('http://localhost:10080/api/get_real_time_data')
-    raise EnvironmentError('test  EnvironmentError')
-    raise IOError("test Error")
+    r = requests.get('http://localhost:10080/api/waiting_hall_msg')
     print(r)
 
 if __name__ == "__main__":
