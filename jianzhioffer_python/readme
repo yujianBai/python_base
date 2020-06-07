@@ -1,0 +1,101 @@
+https://blog.csdn.net/linxid/article/details/88084693
+
+
+1.二维数组中的查找
+2.替换空格
+3.从尾到头打印链表arrayList：
+4.两个栈实现一个队列：
+6.旋转数组的最小数字
+7.斐波那契数列
+8.跳台阶：
+9.变态跳台阶：
+10矩形覆盖：
+11. 二进制中1的个数：
+12.数值的整数次方
+13.调整数组顺序使奇数位于偶数前面
+14.链表中倒数第k个结点：
+15.反转链表：
+16.合并两个排序的链表：
+17.树的子结构：
+18.二叉树的镜像：
+20.包含min函数的栈：
+28.数组中出现次数超过一半的数字：
+29.最小的k个数：
+30.连续子数组的和：
+31.整数中1出现的次数：
+32.把数组排成最小的数：
+33.丑数：
+34.第一个只出现一次的字符：
+35.数组中的逆序对
+37.数字在排序数组中出现的次数：
+40.数组中只出现一次的数字:
+41.和为s的连续正数序列：
+42.和为s的两个数字
+43.左旋转字符串
+44.翻转单词顺序列：
+45.扑克牌顺子：
+46.孩子们的游戏(圆圈中最后剩下的数)
+47.求1+2+3+…+n:
+48.不用加减乘除做加法
+49.把字符串转换成整数
+50.数组中重复的数字
+51.构建乘积数组
+53.表示数值的字符串
+矩阵中的路径
+
+
+
+
+题目	难度	复杂度	解法	备注
+1.二维数组的查找	Easy	O(n2),O(n) O(n^2),O(n)O(n
+2
+ ),O(n)	遍历二维数组；从右上开始查找	Done
+2.替换空格	Easy	O(n) O(n)O(n)	遍历然后直接替换	Done
+3.从尾到头打印链表arrayList	Easy	O(n) O(n)O(n)	遍历保存在list中	Done
+4.重建二叉树				ToDo
+5.两个栈实现一个队列	Easy		另一个栈作为中转	Done
+6.旋转数组的最小数字	Easy	O(n),O(logn) O(n),O(logn)O(n),O(logn)	遍历数组；二分法	Done
+7.斐波那契数列	Easy	O(n) O(n)O(n)	递归；循环的方式实现递归	Done
+8.跳台阶	Easy		和第七题类似	Done
+9.变态跳台阶	Easy		数学归纳法	Done
+10.矩形覆盖	Easy		和第七题类似	Done
+11.二进制中1的个数	Medium		按位运算	ToDo
+12.数值的整数次方	Medium	O(logn) O(logn)O(logn)	采用递归算法依次降幂即可，按位运算可以加快速度	ToDo
+13.调整数组顺序使奇数位于偶数前面	Medium		python可以使用lambda	ToDo
+14.链表中倒数第k个结点	Medium	O(n) O(n)O(n)	双指针，一前一后	Done
+15.反转链表	Medium	O(n) O(n)O(n)		ToDo
+16.合并两个排序链表	Medium	O(n+m) O(n+m)O(n+m)	递归，依次返回两个链表的最小值	Done
+17.判断子结构	Medium	O() O()O()	ToDo
+18.二叉树的镜像	Easy	O() O()O()	递归依次交换左右子树即可	Done
+20.包含min函数的栈	Medium	O(n) O(n)O(n)	建一个辅助栈，保存当前数的最小值	ToDo
+28.数组中出现次数超过一半的数字	Medium	O(n)；O(logn) O(n)；O(logn)O(n)；O(logn)	遍历数组；从中间向两边展开	Done
+29.最小的k个数	Medium	O(nlogn)；O(n) O(nlogn)；O(n)O(nlogn)；O(n)	排序然后输出；挑选替换	Done
+30.连续子数组的最大和	Easy	O(n2)； O(n^2)；O(n
+2
+ )；	暴力法，求解所有字符串的和；	Done
+31.整数1出现的次数	Easy	O(nlogn) O(nlogn)O(nlogn)	遍历，然后计算个数	Done
+32.把数组排成最小的数	Medium	O(n2); O(n^2);O(n
+2
+ );	字符串两两比较	ToDo
+33.丑数	Medium	O(n) O(n)O(n)	依次生成	Done
+34.第一个只出现一次的字符	Easy	O(n) O(n)O(n)	保存字典然后判断	Done
+35.数组中的逆序对	Medium	O(n2);O(nlogn) O(n^2);O(nlogn)O(n
+2
+ );O(nlogn)	暴力；	Done
+37.数字在排序数组中出现的次数	Easy	O(n);O(logn) O(n);O(logn)O(n);O(logn)	遍历；二分查找	Done
+40.数组中只出现一次的数字	Easy	O(n) O(n)O(n)	哈希表	Done
+41.和为s的连续正数序列	Easy	O(n2),O(n),O(logn) O(n^2),O(n),O(logn)O(n
+2
+ ),O(n),O(logn)	双指针；遍历数组求另一个解；二分法	Done
+42.和为S的两个数字	Easy	O(n) O(n)O(n)	双指针	Done
+43.左旋转字符串	Easy	O(1) O(1)O(1)	好吧，太简单	Done
+44.翻转单词顺序列	Easy	O(n) O(n)O(n)	翻转组合	Done
+45.扑克牌顺子	Easy	O(n) O(n)O(n)	gap和大小王个数比较	Done
+46.圆圈中最后剩下的数	Easy	O(n) O(n)O(n)	模拟这个过程	Done
+47.求1+2+3+…+n	Easy	O(n) O(n)O(n)	利用and实现递归终止	Done
+48.不用加减乘除做加法	Medium	O(1) O(1)O(1)	利用位运算来实现	ToDO
+49.把字符串转换成整数	Easy	O(n) O(n)O(n)	主要是负数和特殊情况	Done
+50.数组中重复的数字	Easy	O(n) O(n)O(n)	哈希表保存次数然后输出	Done
+51.构建乘积数组	Medium	O(n) O(n)O(n)	正反向遍历，依次保存之前的乘积值	Done
+53.表示数值的字符串	Easy	O(1) O(1)O(1)	作弊式操作float	Done
+矩阵中路径	Medium	回溯法，关键是如何写递归

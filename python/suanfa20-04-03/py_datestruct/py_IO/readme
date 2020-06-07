@@ -1,0 +1,18 @@
+Tcp
+
+http
+
+socket 编程
+
+io多路复用
+
+并发网络库
+    gevnet
+    python3 的  asyncio
+    tronado
+
+tcp 和 http 是重点 和常考点
+
+了解socket编程原理有助于我们理解框架的实现
+
+并发网络底层一般是基于io多路复用的
