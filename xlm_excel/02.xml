@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<!DOCTYPE CoverLetter SYSTEM "Cover Letter 2020-01-02-01.DTD">
+<CoverLetter>
+<Header xmlns:cmp="http://www.w3.org/1999/xhtml">
+<cmp:DocumentID>documentid...</cmp:DocumentID>
+<cmp:RID>@@@hsbc-scf</cmp:RID>
+<cmp:Version>14567UUU</cmp:Version>
+</Header>
+    <body>
+        <acc></acc>
+    </body>
+</CoverLetter>

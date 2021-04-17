@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<Info>
+<Field Index="0" Name="保留"/>
+    <Field Index="1" Name="姓名">某某人</Field>
+    <Field Index="2" Name="出生地">未知省未知市</Field>
+    <Field Index="3" Name="籍贯">未知省未知县</Field>
+    <Field Index="4" Name="本市(县)其他住址"/>
+    <Field Index="5" Name="性别">男</Field>
+    <Field Index="6" Name="民族">汉族</Field>
+    <Field Index="7" Name="出生日期">2999-11-14</Field>
+    <Field Index="8" Name="身份证件编号">123456789012345678
+</Field>
+</Info>
