@@ -10,7 +10,7 @@ def main():
     lst = np.arange(1, 11).reshape([2, 5])
 
     print('\nlst:\n ', lst)
-    print('\nnp.exp(lst):\n', np.exp(lst))
+    print('\nnp.exp(lst):\n', np.exp(lst)) # 自然底数
     print('\nnp.exp2(lst):\n', np.exp2(lst))
     print('\nnp.sqrt(lst):\n', np.sqrt(lst))
     print('\nnp.sin(lst):\n', np.sin(lst))
